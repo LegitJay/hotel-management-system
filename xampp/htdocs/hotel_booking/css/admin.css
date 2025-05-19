@@ -1,0 +1,259 @@
+@font-face {
+  font-family: Romans;
+  src: url(fonts/ROMANS.ttf);
+}
+
+:root {
+      --primary: #2d3748;
+      --primary-light: #4a5568;
+      --secondary: #e2b979;
+      --secondary-light: #f0bd86;
+      --success: #38a169;
+      --danger: #e53e3e;
+      --light: #f8fafc;
+      --gray: #e2e8f0;
+      --white: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --radius: 8px;
+    }
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--primary);
+  background-color: var(--light);
+  padding-top: 72px; /* Add padding to prevent content hiding behind fixed nav */
+}
+
+/* Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-name h1 {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Romans';
+  color: var(--secondary);
+}
+
+.right-nav {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.right-nav a {
+  background-color: rgba(212, 175, 55, 0.9);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: var(--primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.right-nav a:hover {
+  background-color: var(--secondary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Content */
+.review-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+    .review-container h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    /* User Booking Section */
+    .user-booking {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .user-booking:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-header {
+      padding: 1.25rem 1.5rem;
+      background-color: #f8fafc;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .user-header h2 {
+      font-size: 1.25rem;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .user-header small {
+      color: var(--primary-light);
+      font-size: 0.9rem;
+      font-weight: lighter;
+    }
+
+    .user-header h3 {
+      color: var(--primary-light);
+      font-size: 0.9rem;
+      font-weight: lighter;
+      margin-bottom: 10px;
+    }
+
+    .user-header p {
+      color: var(--primary-light);
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .guestname {
+      color: var(--primary-light);
+      margin-top: 0rem;
+      font-size: 0.9rem;
+    }
+
+    /* Booking Details Grid */
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .booking-section {
+      background: #f8fafc;
+      padding: 1.25rem;
+      border-radius: var(--radius);
+    }
+
+    .booking-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .detail-row {
+      display: flex;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .detail-label {
+      font-weight: 500;
+      color: var(--primary-light);
+      min-width: 120px;
+    }
+
+    .detail-value {
+      color: var(--primary);
+    }
+
+    /* Action Buttons */
+    .booking-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background-color: #f8fafc;
+      border-top: 1px solid var(--gray);
+    }
+
+    .delete-btn, .confirm-btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .delete-btn {
+      background-color: var(--danger);
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #c53030;
+    }
+
+    .confirm-btn {
+      background-color: var(--success);
+      color: white;
+    }
+
+    .confirm-btn:hover {
+      background-color: #2f855a;
+    }
+
+    /* No bookings message */
+    .no-bookings {
+      text-align: center;
+      padding: 3rem;
+      color: var(--primary-light);
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .detail-row {
+        flex-direction: column;
+      }
+      
+      .detail-label {
+        margin-bottom: 0.25rem;
+      }
+    }

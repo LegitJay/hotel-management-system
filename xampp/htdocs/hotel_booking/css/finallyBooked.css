@@ -1,0 +1,330 @@
+@font-face {
+  font-family: 'Romans';
+  src: url('fonts/ROMANS.ttf');
+}
+
+:root {
+  /* Color Palette */
+  --primary: #2d3748;
+  --primary-light: #4a5568;
+  --secondary: #e2b979;
+  --secondary-light: #f0bd86;
+  --success: #48bb78;
+  --danger: #e53e3e;
+  --light: #f7fafc;
+  --gray: #e2e8f0;
+  --dark-gray: #a0aec0;
+  --white: #ffffff;
+  
+  /* Effects */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  color: var(--primary);
+  background-color: var(--light);
+}
+
+/* Header & Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  background-color: #f0bd86;
+  box-shadow: var(--shadow-sm);
+}
+
+.right-nav {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.right-nav a {
+  background-color: rgba(70, 68, 65, 0.25);
+  border-radius: 20px;
+  padding: 10px 16px;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-right: 50px;
+}
+
+.right-nav a:hover {
+  color: var(--primary);
+  background-color: var(--gray);
+}
+
+/* Booking Progress Steps */
+.booking-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px auto 40px;
+  max-width: 600px;
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.step.active .circle {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.step p {
+  font-size: 0.75rem;
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--gray);
+  max-width: 60px;
+}
+
+/* Main Content Container */
+.review-container {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 30px;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.status {
+  font-size: 1rem;
+  color: var(--primary-light);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Booking Information Sections */
+.booking-info, 
+.room-details, 
+.guest-info {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+
+.booking-info:hover,
+.room-details:hover,
+.guest-info:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.booking-info h3,
+.room-details h3,
+.guest-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.booking-info p,
+.room-details p,
+.guest-info p {
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-info p:last-child,
+.room-details p:last-child,
+.guest-info p:last-child {
+  margin-bottom: 0;
+}
+
+.booking-info strong,
+.room-details strong,
+.guest-info strong {
+  color: var(--primary-light);
+  font-weight: 500;
+  min-width: 120px;
+}
+
+/* Action Buttons */
+.booking-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.edit-btn,
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.edit-btn {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.edit-btn:hover {
+  background-color: var(--secondary-light);
+}
+
+.delete-btn {
+  background-color: var(--white);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.delete-btn:hover {
+  background-color: #fff5f5;
+}
+
+/* Confirm Booking Section */
+.confirm-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  background-color: var(--success);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  margin-left: 288px;
+}
+
+.confirm-btn:hover {
+  background-color: #38a169;
+}
+
+/* Alert Messages */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  font-size: 0.875rem;
+}
+
+.alert.error {
+  background-color: #fff5f5;
+  color: var(--danger);
+  border: 1px solid #fed7d7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 16px;
+  }
+  
+  .booking-steps {
+    margin: 100px auto 32px;
+    gap: 8px;
+  }
+  
+  .line {
+    max-width: 30px;
+  }
+  
+  .booking-actions {
+    flex-direction: column;
+  }
+  
+  .edit-btn, 
+  .delete-btn {
+    width: 100%;
+  }
+  
+  .booking-info p,
+  .room-details p,
+  .guest-info p {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .booking-info strong,
+  .room-details strong,
+  .guest-info strong {
+    margin-bottom: 2px;
+  }
+}
+
+/* Font Face for Logo */
+@font-face {
+  font-family: 'Romans';
+  src: url('fonts/ROMANS.ttf');
+}
+
+.hotel-name h1 {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Romans';;
+}

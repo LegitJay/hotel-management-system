@@ -1,0 +1,136 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(243, 243, 243);
+}
+
+.registration-container {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  max-height: 700px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+}
+
+.left-panel {
+  flex: 1;
+  background: url(images/hotel2.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.left-panel img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-panel {
+  flex: 1.2;
+  padding: 40px 60px;
+  background: #fff;
+}
+
+/* Form styles */
+.form-box h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #222;
+}
+
+.form-subtext {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.register-btn {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Sign-in link styles */
+.signin-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox styles */
+.checkbox-container {
+  display: block;
+  font-size: 12px;
+  color: #333;
+  text-align: left;
+}
+
+.checkbox-container input {
+  margin: 0;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .registration-container {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    padding: 30px;
+  }
+}

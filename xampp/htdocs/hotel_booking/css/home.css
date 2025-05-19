@@ -1,0 +1,481 @@
+@font-face {
+  font-family: Romans;
+  src: url(fonts/ROMANS.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(40, 39, 39);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #5b5959;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #787676;
+}
+/* NAVIGATION */
+nav {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: transparent;
+  z-index: 1000;
+  color: white;
+  transition: all 0.3s ease;
+}
+    
+.hotel-name a {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Romans';
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hotel-name a:hover {
+  color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.center-nav {
+  flex: 1;
+  justify-content: center;
+}
+
+.right-nav {
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+nav ul li a:hover {
+    color: #000000;
+  }
+  
+/*Reg&LogIn-btn*/
+.reg-btn {
+  background-color: #ffffff;
+  border: 3px solid #e49846;
+  border-radius: 20px;
+  padding: 3px 14px;
+  color: #e49846;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.reg-btn:hover {
+  background-color: #e49846;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+}
+
+.log-btn {
+  background-color: #e49846;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.log-btn:hover {
+  background-color: white;
+  color: #000000;;
+}
+
+/*SCROLL EFFECT*/
+nav.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+nav.scrolled {
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 45px;
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+nav.scrolled .hotel-name a{
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+
+nav.scrolled .hotel-name a:hover{
+  color: #e49846;
+  font-size: 22px;
+}
+
+nav.scrolled nav ul li a {
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+  
+nav.scrolled ul li a {
+  color: black;
+  font-size: 1rem;
+}
+
+nav.scrolled ul li a:hover {
+  color: #000000;
+}
+
+nav.scrolled .reg-btn {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  box-shadow: none;
+}
+
+nav.scrolled .reg-btn:hover {
+  color: #e49846  ;
+}
+
+nav.scrolled .log-btn {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}
+
+nav.scrolled .log-btn:hover {
+  background-color: transparent;
+  box-shadow: none;
+  color: #e49846;
+}
+
+/* SECTION */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+/* HOME SECTION */
+#home { 
+  background: url(images/photo1.png) no-repeat center center;
+  filter: brightness(0.9);
+  background-size: cover;
+  display: flex;
+  text-align: center;
+}
+
+.background {
+  filter: brightness(0.5);
+}
+
+.home-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#paragraph {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5px;
+  font-weight: 1;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* About Section */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  margin-top: 150px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #000;
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e49846;
+  border-radius: 50%;
+}
+
+.line {
+  width: 150px;
+  height: 2px;
+  background-color: #e49846;
+  margin: 0 10px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e49846, #f0bd86);
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e49846;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+/* Services Section */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.services-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer/Contact Section */
+footer {
+  background: #1a1a1a;
+  padding: 60px 0 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #e49846;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-column p, 
+.footer-column a {
+  color: #ccc;
+  line-height: 1.8;
+  font-weight: 300;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-column a:hover {
+  color: #e49846;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #777;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-content h2,
+  .services-container h2 {
+    font-size: 2rem;
+  }
+  
+  .about-card,
+  .service-card {
+    padding: 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin-top: 100px;
+    padding: 60px 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-card {
+    padding: 30px 20px;
+  }
+} 

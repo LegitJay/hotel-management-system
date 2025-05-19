@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'Romans';
+  src: url('fonts/ROMANS.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.hotel-name h1 {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Romans';
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  background-color: #f0bd86;
+  box-shadow: var(--shadow-sm);
+}
+
+.right-nav {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.right-nav a {
+  background-color: rgba(70, 68, 65, 0.25);
+  border-radius: 20px;
+  padding: 10px 16px;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-right: 50px;
+}
+
+.right-nav a:hover {
+  color: var(--primary);
+  background-color: var(--gray);
+}
+
+/* Main Container */
+.edit-booking-container {
+  margin: 100px auto 40px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-header h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Form Layout */
+.edit-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-section.full-width {
+  grid-column: span 2;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Form Elements */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #f0bd86;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(240, 189, 134, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.helper-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Button */
+.submit-btn {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .edit-booking-container {
+    margin: 80px 16px 40px;
+    padding: 20px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-section.full-width {
+    grid-column: span 1;
+  }
+
+  .submit-btn {
+    padding: 10px 30px;
+  }
+}
